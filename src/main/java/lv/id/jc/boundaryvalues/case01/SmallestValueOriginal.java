@@ -5,11 +5,11 @@ import java.util.function.LongToIntFunction;
 public class SmallestValueOriginal implements LongToIntFunction {
 
     @Override
-    public int applyAsInt(long number) {
+    public int applyAsInt(long m) {
         int n = 1;
         long factorial = 1;
 
-        while (factorial <= number) {
+        while (factorial <= m) {
             n++;
             factorial *= n;
         }
