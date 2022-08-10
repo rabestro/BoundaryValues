@@ -1,4 +1,5 @@
-package lv.id.jc.boundaryvalues
+package lv.id.jc.boundaryvalues.case02
+
 
 import spock.lang.Narrative
 import spock.lang.Specification
@@ -8,15 +9,15 @@ import spock.lang.Unroll
 
 import java.time.LocalDate
 
-@Subject(FridaysInMonthWrong)
+@Subject(FridaysInMonthOriginal)
 @Title("All Fridays in the month (wrong)")
 @Narrative('The wrong algorithm in "Java SE 17 Playbook" course')
-class FridaysInMonthWrongTest extends Specification {
+class FridaysInMonthOriginalTest extends Specification {
 
     @Unroll('Today is #today; #comment')
     def 'should return all fridays in the month'() {
         given:
-        def underTest = new FridaysInMonthWrong()
+        def underTest = new FridaysInMonthOriginal()
 
         expect:
         underTest.apply(today) == fridays

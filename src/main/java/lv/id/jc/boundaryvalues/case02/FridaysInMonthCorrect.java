@@ -1,4 +1,4 @@
-package lv.id.jc.boundaryvalues;
+package lv.id.jc.boundaryvalues.case02;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

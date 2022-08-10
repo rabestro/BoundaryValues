@@ -1,5 +1,6 @@
-package lv.id.jc.boundaryvalues
+package lv.id.jc.boundaryvalues.case02
 
+import lv.id.jc.boundaryvalues.case02.FridaysInMonthCorrect
 import spock.lang.Narrative
 import spock.lang.Specification
 import spock.lang.Subject

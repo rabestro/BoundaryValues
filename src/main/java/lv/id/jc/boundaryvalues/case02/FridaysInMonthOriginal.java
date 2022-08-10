@@ -1,4 +1,4 @@
-package lv.id.jc.boundaryvalues;
+package lv.id.jc.boundaryvalues.case02;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -6,7 +6,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FridaysInMonthWrong implements FridaysInMonth {
+public class FridaysInMonthOriginal implements FridaysInMonth {
     @Override
     public List<LocalDate> apply(LocalDate date) {
         var start = date.with(TemporalAdjusters.firstDayOfMonth());
