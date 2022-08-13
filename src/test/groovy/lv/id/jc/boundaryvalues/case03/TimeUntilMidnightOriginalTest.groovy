@@ -6,11 +6,10 @@ import java.time.Clock
 import java.time.LocalDateTime
 import java.time.ZoneId
 
-class TimeUntilMidnightCorrectTest extends Specification {
-
+class TimeUntilMidnightOriginalTest extends Specification {
     def 'should return correct message for time zone'() {
         given:
-        def underTest = new TimeUntilMidnightCorrect(clock)
+        def underTest = new TimeUntilMidnightOriginal(clock)
 
         when:
         def message = underTest.get()

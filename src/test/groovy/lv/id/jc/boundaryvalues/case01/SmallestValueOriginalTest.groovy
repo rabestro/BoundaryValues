@@ -1,11 +1,14 @@
 package lv.id.jc.boundaryvalues.case01
 
+
 import spock.lang.Specification
+import spock.lang.Timeout
 
 class SmallestValueOriginalTest extends Specification {
     static def F19 = 121_645_100_408_832_000
     static def F20 = 2_432_902_008_176_640_000
 
+    @Timeout(2)
     def 'should calculate the smallest value'() {
         given:
         def underTest = new SmallestValueOriginal()
@@ -32,5 +35,6 @@ class SmallestValueOriginalTest extends Specification {
         F20 + 1                | 21
         F20 + 2                | 21
         F20 + 3                | 21
+        Long.MAX_VALUE         | 21
     }
 }

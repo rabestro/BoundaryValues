@@ -1,9 +1,6 @@
 package lv.id.jc.boundaryvalues.case03;
 
-import java.time.Clock;
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 
 public class TimeUntilMidnightCorrect implements TimeUntilMidnight {
 
@@ -23,9 +20,9 @@ public class TimeUntilMidnightCorrect implements TimeUntilMidnight {
 
     @Override
     public String get() {
-        var now = LocalDateTime.now(clock);
-
-        var midnight = LocalDateTime.of(now.toLocalDate().plusDays(1), LocalTime.MIDNIGHT);
+        var now = ZonedDateTime.now(clock);
+        var nextDay = now.toLocalDate().plusDays(1);
+        var midnight = ZonedDateTime.of(nextDay, LocalTime.MIDNIGHT, now.getZone());
 
         var duration = Duration.between(now, midnight);
 
